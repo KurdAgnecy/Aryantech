@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Aryan Tech | Official Links</title>
 
-    <!-- TikTok Pixel Code Start -->
     <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
@@ -15,8 +14,6 @@
       ttq.page();
     }(window, document, 'ttq');
     </script>
-    <!-- TikTok Pixel Code End -->
-
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         
@@ -83,30 +80,30 @@
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0px rgba(0, 210, 255, 0.1);
         }
 
-        .phone-ring-svg {
-            width: 65px;
-            height: 65px;
-            margin: 0 auto;
-            fill: #fff;
-            animation: ring-vibe 1.2s infinite ease-in-out;
-            filter: drop-shadow(0 0 12px rgba(0, 210, 255, 0.5));
-        }
-
-        @keyframes ring-vibe {
-            0%, 100% { transform: rotate(0) scale(1); }
-            10%, 30%, 50% { transform: rotate(-10deg) scale(1.05); }
-            20%, 40%, 60% { transform: rotate(10deg) scale(1.05); }
-            70% { transform: rotate(0) scale(1); }
-        }
-
         .instruction {
             font-size: 1.15rem;
             font-weight: 700;
-            margin-top: 18px;
+            margin-top: 5px;
             color: #ffffff;
             line-height: 1.5;
             letter-spacing: 0.5px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* ستایلی تیری جوڵاو */
+        .animated-arrow {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto 25px auto;
+            color: #00d2ff;
+            animation: bounce 1.5s infinite ease-in-out;
+            filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.6));
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-12px); }
+            60% { transform: translateY(-6px); }
         }
 
         .link-buttons {
@@ -119,25 +116,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 12px;
             width: 100%;
             padding: 14px;
             border-radius: 12px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
+        .btn:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        
+        .btn svg { width: 22px; height: 22px; fill: currentColor; }
 
         .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
         .btn-viber { background: linear-gradient(135deg, #7360f2, #5a45d1); }
         .btn-snap { background: linear-gradient(135deg, #FFFC00, #d4d100); color: #000; }
         .btn-insta { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-        .btn-lead { background: linear-gradient(135deg, #9d4edd, #5a189a); border: 1px solid #c77dff; }
-        .btn-sale { background: linear-gradient(135deg, #ff0055, #c80043); border: 1px solid #ff4d85; }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #a9b5cc;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
+        }
+
     </style>
 </head>
 <body>
@@ -150,61 +158,12 @@
 
         <div class="center-card">
             
-            <svg class="phone-ring-svg" viewBox="0 0 24 24">
-                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 1.01-.63 1.01-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            <div class="instruction">ڕێگایەکی پەیوەندی کردن هەڵبژێرە</div>
+            
+            <svg class="animated-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
             </svg>
-
-            <div class="instruction">ڕێگاکانی پەیوەندی و خزمەتگوزارییەکان</div>
             
             <div class="link-buttons">
-                <!-- بەشی Sales - بۆ فرۆشتن -->
-                <!-- تێبینی: لە شوێنی # لینکی بەرهەمەکەت دابنێ -->
-                <a href="#" class="btn btn-sale" onclick="trackTikTokEvent('CompletePayment', 'Sales')">
-                    کڕینی بەرهەم (Sales)
-                </a>
-
-                <!-- بەشی Leads - بۆ فۆڕم و لیدس -->
-                <!-- تێبینی: لە شوێنی # لینکی فۆڕمەکەت دابنێ -->
-                <a href="#" class="btn btn-lead" onclick="trackTikTokEvent('SubmitForm', 'Lead')">
-                    پڕکردنەوەی فۆڕم (Lead)
-                </a>
-
-                <hr style="border-color: rgba(255,255,255,0.1); margin: 10px 0;">
-
-                <!-- واتساپ -->
                 <a href="https://wa.me/9647729585559" target="_blank" class="btn btn-whatsapp" onclick="trackTikTokEvent('Contact', 'WhatsApp')">
-                    واتساپ (WhatsApp)
-                </a>
-
-                <!-- ڤایبەر -->
-                <a href="viber://chat?number=9647729585559" class="btn btn-viber" onclick="trackTikTokEvent('Contact', 'Viber')">
-                    ڤایبەر (Viber)
-                </a>
-
-                <!-- ئینستاگرام -->
-                <a href="https://www.instagram.com/aryann.tech?igsh=MXEzcWozYWZwaHVyOA==" target="_blank" class="btn btn-insta" onclick="trackTikTokEvent('ClickButton', 'Instagram')">
-                    ئینستاگرام (Instagram)
-                </a>
-
-                <!-- سناپچات -->
-                <a href="https://www.snapchat.com/add/aryan.it?share_id=LQj7pI5PGuE&locale=en-US" target="_blank" class="btn btn-snap" onclick="trackTikTokEvent('ClickButton', 'Snapchat')">
-                    سناپچات (Snapchat)
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- سکریپتی ناردنی ئیڤێنتەکان بۆ پیکسێڵ -->
-    <script>
-        function trackTikTokEvent(eventName, buttonName) {
-            if (typeof ttq !== 'undefined') {
-                ttq.track(eventName, {
-                    content_name: buttonName,
-                    content_type: 'product'
-                });
-            }
-        }
-    </script>
-
-</body>
-</html>
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.9
