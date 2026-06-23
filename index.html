@@ -17,39 +17,32 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         
-        html, body { 
-            height: 100%; 
-            width: 100%; 
-            overflow-x: hidden;
-            overflow-y: auto;
+        html, body {
+            width: 100%;
             background-color: #020308;
         }
 
         body { 
+            min-height: 100vh; /* ئەمە کێشەی سکرۆڵ نەبوونەکەی چارەسەر کرد */
             background-image: 
                 radial-gradient(circle at 50% 15%, #0b1a3a 0%, transparent 60%),
                 radial-gradient(circle at 85% 85%, #18092b 0%, transparent 50%);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
             color: #fff;
-            padding: 20px 0;
+            padding: 30px 15px; /* بۆشایی زیاتر بۆ ئەوەی شاشەکە نەبڕێت */
         }
 
         .main-wrapper {
             width: 100%; 
             max-width: 410px;
-            padding: 20px;
+            margin: 0 auto; /* بۆ ئەوەی ناوەڕاست بێت بەبێ کێشە */
             display: flex;
             flex-direction: column;
             gap: 25px;
             text-align: center;
         }
 
-        .brand-zone {
-            margin-bottom: 5px;
-        }
+        .brand-zone { margin-bottom: 5px; }
 
         .brand-logo-text {
             font-size: 2rem;
@@ -90,7 +83,6 @@
             margin-bottom: 15px;
         }
 
-        /* ستایلی تیری جوڵاو */
         .animated-arrow {
             width: 32px;
             height: 32px;
@@ -121,7 +113,7 @@
             padding: 14px;
             border-radius: 12px;
             text-decoration: none;
-            color: white;
+            color: #ffffff !important;
             font-weight: bold;
             font-size: 1.05rem;
             transition: all 0.3s ease;
@@ -130,40 +122,6 @@
 
         .btn:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
         
-        .btn svg { width: 22px; height: 22px; fill: currentColor; }
+        .btn svg { width: 24px; height: 24px; fill: #ffffff; }
 
-        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
-        .btn-viber { background: linear-gradient(135deg, #7360f2, #5a45d1); }
-        .btn-snap { background: linear-gradient(135deg, #FFFC00, #d4d100); color: #000; }
-        .btn-insta { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
-
-        .footer-text {
-            margin-top: 25px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #a9b5cc;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-            letter-spacing: 0.5px;
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="main-wrapper">
-        <div class="brand-zone">
-            <h1 class="brand-logo-text">Aryan Tech</h1>
-            <p class="brand-slogan">باشترین خزمەتگوزاری تەکنەلۆژی</p>
-        </div>
-
-        <div class="center-card">
-            
-            <div class="instruction">ڕێگایەکی پەیوەندی کردن هەڵبژێرە</div>
-            
-            <svg class="animated-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
-            
-            <div class="link-buttons">
-                <a href="https://wa.me/9647729585559" target="_blank" class="btn btn-whatsapp" onclick="trackTikTokEvent('Contact', 'WhatsApp')">
-                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.9
+        .btn-whatsapp { background: linear-gradient(135deg, #2
