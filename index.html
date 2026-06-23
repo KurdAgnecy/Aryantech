@@ -8,8 +8,9 @@
     <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-      var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-      ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
       ttq.load('D8T5V63C77UDQUH9CGV0');
       ttq.page();
     }(window, document, 'ttq');
@@ -17,32 +18,39 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
         
-        html, body {
-            width: 100%;
+        html, body { 
+            height: 100%; 
+            width: 100%; 
+            overflow-x: hidden;
+            overflow-y: auto;
             background-color: #020308;
         }
 
         body { 
-            min-height: 100vh; /* ئەمە کێشەی سکرۆڵ نەبوونەکەی چارەسەر کرد */
             background-image: 
                 radial-gradient(circle at 50% 15%, #0b1a3a 0%, transparent 60%),
                 radial-gradient(circle at 85% 85%, #18092b 0%, transparent 50%);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
             color: #fff;
-            padding: 30px 15px; /* بۆشایی زیاتر بۆ ئەوەی شاشەکە نەبڕێت */
+            padding: 20px 0;
         }
 
         .main-wrapper {
             width: 100%; 
             max-width: 410px;
-            margin: 0 auto; /* بۆ ئەوەی ناوەڕاست بێت بەبێ کێشە */
+            padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 25px;
             text-align: center;
         }
 
-        .brand-zone { margin-bottom: 5px; }
+        .brand-zone {
+            margin-bottom: 5px;
+        }
 
         .brand-logo-text {
             font-size: 2rem;
@@ -73,31 +81,33 @@
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0px rgba(0, 210, 255, 0.1);
         }
 
+        .phone-ring-svg {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            fill: #fff;
+            animation: ring-vibe 1.2s infinite ease-in-out;
+            filter: drop-shadow(0 0 12px rgba(0, 210, 255, 0.5));
+        }
+
+        @keyframes ring-vibe {
+            0%, 100% { transform: rotate(0) scale(1); }
+            10%, 30%, 50% { transform: rotate(-10deg) scale(1.05); }
+            20%, 40%, 60% { transform: rotate(10deg) scale(1.05); }
+            70% { transform: rotate(0) scale(1); }
+        }
+
         .instruction {
             font-size: 1.15rem;
             font-weight: 700;
-            margin-top: 5px;
+            margin-top: 18px;
             color: #ffffff;
             line-height: 1.5;
             letter-spacing: 0.5px;
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* زیادکرا بۆ ڕێکخستنی بۆشایی */
         }
 
-        .animated-arrow {
-            width: 32px;
-            height: 32px;
-            margin: 0 auto 25px auto;
-            color: #00d2ff;
-            animation: bounce 1.5s infinite ease-in-out;
-            filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.6));
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-12px); }
-            60% { transform: translateY(-6px); }
-        }
-
+        /* ستایلی دوگمەکان کە لە کۆدەکەتدا پچڕابوو */
         .link-buttons {
             display: flex;
             flex-direction: column;
@@ -108,12 +118,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
             width: 100%;
-            padding: 14px;
+            padding: 15px;
             border-radius: 12px;
             text-decoration: none;
-            color: #ffffff !important;
+            color: white;
             font-weight: bold;
             font-size: 1.05rem;
             transition: all 0.3s ease;
@@ -121,7 +130,61 @@
         }
 
         .btn:hover { transform: translateY(-2px); filter: brightness(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-        
-        .btn svg { width: 24px; height: 24px; fill: #ffffff; }
 
-        .btn-whatsapp { background: linear-gradient(135deg, #2
+        .btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .btn-viber { background: linear-gradient(135deg, #7360f2, #5a45d1); }
+        .btn-insta { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .btn-snap { background: linear-gradient(135deg, #FFFC00, #d4d100); color: #000; }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="brand-zone">
+            <h1 class="brand-logo-text">Aryan Tech</h1>
+            <p class="brand-slogan">باشترین خزمەتگوزاری تەکنەلۆژی</p>
+        </div>
+
+        <div class="center-card">
+            
+            <svg class="phone-ring-svg" viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 1.01-.63 1.01-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+
+            <div class="instruction">ڕێگاکانی پەیوەندی و خزمەتگوزارییەکان</div>
+            
+            <div class="link-buttons">
+                <a href="https://wa.me/9647729585559" target="_blank" class="btn btn-whatsapp" onclick="trackEvent('Contact', 'WhatsApp')">
+                    واتساپ (WhatsApp)
+                </a>
+
+                <a href="viber://chat?number=9647729585559" class="btn btn-viber" onclick="trackEvent('Contact', 'Viber')">
+                    ڤایبەر (Viber)
+                </a>
+
+                <a href="https://www.instagram.com/aryann.tech?igsh=MXEzcWozYWZwaHVyOA==" target="_blank" class="btn btn-insta" onclick="trackEvent('ClickButton', 'Instagram')">
+                    ئینستاگرام (Instagram)
+                </a>
+
+                <a href="https://www.snapchat.com/add/aryan.it?share_id=LQj7pI5PGuE&locale=en-US" target="_blank" class="btn btn-snap" onclick="trackEvent('ClickButton', 'Snapchat')">
+                    سناپچات (Snapchat)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function trackEvent(eventName, sourceName) {
+            if (typeof ttq !== 'undefined') {
+                ttq.track(eventName, {
+                    content_name: sourceName,
+                    content_type: 'product',
+                    value: 1,
+                    currency: 'USD'
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
